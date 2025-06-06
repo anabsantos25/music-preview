@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <title>Music Preview</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body class="fundo">
+
+  <div class="container py-4">
+
+  <h1 class="mb-4 d-flex align-items-center justify-content-center">
+  Music Preview
+    <img src="imagens\icone.png" alt="Ícone" style="height: 45px; margin-left: 10px;">
+  </h1>
+
+    <h6>Ouça previews de músicas e álbuns inteiros no nosso buscador!</h6>
+
+    <div class="mb-3 input-group">
+      <label for="inputBusca" class="visually-hidden">Buscar música</label>
+      <input id="inputBusca" type="text" class="form-control" placeholder="Busque artista, álbum ou música" aria-label="Campo de busca" />
+      <button id="btnBuscar" class="btn btn-secondary" aria-label="Botão para buscar">Buscar</button>
+    </div>
+
+    <div id="feedbackBusca" class="text-center mb-3"></div> <!-- Espaço para mensagens de feedback -->
+    <div id="resultadoBusca" class="mb-5"></div> <!-- Onde os resultados da busca vão aparecer -->
+
+    <br>
+    <br>
+    <h2>Previews por Gênero Musical</h2> 
+
+    <!-- Navegação com abas Bootstrap -->
+    <ul class="nav nav-tabs" id="generoTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="pop-tab" data-bs-toggle="tab" data-bs-target="#pop" type="button" role="tab" aria-controls="pop" aria-selected="true">Pop</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="rock-tab" data-bs-toggle="tab" data-bs-target="#rock" type="button" role="tab" aria-controls="rock" aria-selected="false">Rock</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="rap-tab" data-bs-toggle="tab" data-bs-target="#rap" type="button" role="tab" aria-controls="rap" aria-selected="false">Rap</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="electro-tab" data-bs-toggle="tab" data-bs-target="#electro" type="button" role="tab" aria-controls="electro" aria-selected="false">Electro</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="jazz-tab" data-bs-toggle="tab" data-bs-target="#jazz" type="button" role="tab" aria-controls="jazz" aria-selected="false">Jazz</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="soul-tab" data-bs-toggle="tab" data-bs-target="#soul" type="button" role="tab" aria-controls="soul" aria-selected="false">Soul</button>
+      </li>
+      <li>
+        <img src="imagens\beat-unscreen.gif" alt="Animação" style="height: 22px;" />
+      </li>
+    </ul>
+
+    <br>
+
+    <h5>Sugestões</h5>
+
+    <!-- Conteúdo das abas -->
+    <div class="tab-content mt-3" id="generoTabsContent">
+      <div class="tab-pane fade show active" id="pop" role="tabpanel" aria-labelledby="pop-tab">
+        <div class="lista-musicas grid-resultados"></div>
+      </div>
+      <div class="tab-pane fade" id="rock" role="tabpanel" aria-labelledby="rock-tab">
+        <div class="lista-musicas grid-resultados"></div>
+      </div>
+      <div class="tab-pane fade" id="rap" role="tabpanel" aria-labelledby="rap-tab">
+        <div class="lista-musicas grid-resultados"></div>
+      </div>
+      <div class="tab-pane fade" id="electro" role="tabpanel" aria-labelledby="electro-tab">
+        <div class="lista-musicas grid-resultados"></div>
+      </div>
+      <div class="tab-pane fade" id="jazz" role="tabpanel" aria-labelledby="jazz-tab">
+        <div class="lista-musicas grid-resultados"></div>
+      </div>
+      <div class="tab-pane fade" id="soul" role="tabpanel" aria-labelledby="soul-tab">
+        <div class="lista-musicas grid-resultados"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

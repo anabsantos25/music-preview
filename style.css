@@ -1,0 +1,189 @@
+/* define os elementos de letra e margens do background*/
+body {
+  color: #ffffff; /* Texto branco */
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* define o fundo como uma imagem e centraliza ele de forma que nao precise repetir, so completa com um fundo preto */
+body.fundo {
+  background-image: url('imagens/backgroundd.jpg');
+  background-repeat: no-repeat;     /* nao repete a imagem */
+  background-position: top center;  /* fixa no topo e centraliza */
+  background-size: 100% auto; /* ajusta a imagem para cobrir todo o fundo */
+  background-color: #000;
+}
+
+/* titulo principal com fonte especial (eh um background em degrade com letras transparentes por cima pra simular degrade na propria letra */
+h1 {
+  font-family: 'Silkscreen', sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ffbb00, #8400ff);
+  -webkit-background-clip: text; /* faz parte de extensões específicas para navegadores baseados no WebKit - chrome, safari e outros, por isso ta em alerta */
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 2px 2px #000);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* titulo 2 */
+h2 {
+  text-shadow: 2px 2px 6px rgba(151, 151, 151, 0.7);
+}
+
+/* titulo 3 */
+h6 {
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* input de busca - a maioria e para centralizar, definir tamanhos e cores aos botoes e janelas */
+.input-group {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+#btnBuscar {
+  transition: background-color 0.3s ease;
+  background-color: rgb(0, 0, 0);
+}
+
+#btnBuscar:hover {
+  background-color: gray;
+  color: #fff;
+}
+
+/* Resultado */
+#resultadoBusca h3 {
+  margin-top: 2rem;
+  color: #ffffff;
+}
+
+.grid-resultados {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 1rem;
+}
+
+.album-item {
+  background: linear-gradient(190deg, #000000, #383838);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  transition: transform 0.2s ease;
+  border: 2px solid #949494;
+}
+
+.album-item:hover {
+  transform: scale(1.03);
+  background-color: gray;
+  box-shadow: 0 5px 15px rgba(139, 139, 139, 0.5);
+}
+
+.album-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.album-item audio {
+  height: 40px; 
+  width: 100%;  
+}
+
+.album-item strong,
+.album-item p {
+  max-height: 2.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+
+/* abas */
+.nav-tabs .nav-link {
+  color: #ffffff;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+  background-color:  #525252;
+}
+
+.nav-tabs .nav-link.active {
+  color: #ffffff;
+  background: #525252;
+}
+
+.botaoVoltar {
+  margin-bottom: 1rem;
+}
+
+/* conteudo das abas */
+.lista-musicas {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(205px, 1fr)); 
+  gap: 20px; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+/* container */
+.container {
+  max-width: 900px;
+  background-color: transparent;
+}
+
+/* separadores */
+hr {
+  border: 0;
+  border-top: 1px solid #333;
+  margin: 1rem 0;
+}
+
+/* efeito de fade nas abas */
+.tab-pane {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.tab-pane.active.show {
+  opacity: 1;
+}
+
+/* cores especificas para cada genero */
+#pop .album-item {
+  border: 2px solid #7fa1f1;
+  background: linear-gradient(190deg, #00ccff, #031e35); /* pop - azul claro e escuro */
+}
+
+#rock .album-item {
+  border: 2px solid #474747;
+  background: linear-gradient(190deg, #000000, #570000); /* rock - preto e vinho */
+}
+
+#rap .album-item {
+  border: 2px solid #6f8372;
+  background: linear-gradient(190deg, #0a58ce, #004805); /* rap - azul e verde */
+}
+
+#electro .album-item {
+  border: 2px solid #c971ff;
+  background: linear-gradient(190deg, #fc559a, #470764); /* electro - rosa e roxo */
+}
+
+#jazz .album-item {
+  border: 2px solid #591e1e;
+  background: linear-gradient(190deg, #ffcaca, #b21c1c); /* jazz - rosa e vermelho */
+}
+
+#soul .album-item {
+  border: 2px solid #782911;
+  background: linear-gradient(190deg, #0f440f, #f57f31);/* soul - verde e laranja */
+}
+
